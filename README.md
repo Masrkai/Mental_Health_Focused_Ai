@@ -19,3 +19,12 @@ The project uses the `os` library to create a file called `conversation_history.
 ```
 HF_API_KEY=<YOUR_TOKEN>
 ```
+
+6 - download the needed repositories using this command in the project directory
+```
+pip install -r requirements.txt
+```
+if you had permission issues use
+```
+pip install --user -r requirements.txt
+```
