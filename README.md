@@ -10,6 +10,7 @@ The project uses the `os` library to create a file called `conversation_history.
 `git clone https://github.com/Masrkai/Mental_Health_Focused_Ai.git`
 
 2 - get your hugging face token following the steps on here: [hugging face documentation](https://huggingface.co/docs/hub/en/security-tokens)
+
 3 - cd to the downloaded directory
 
 4 - create a file named `.env`
