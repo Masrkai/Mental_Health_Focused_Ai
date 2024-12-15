@@ -1,9 +1,5 @@
 requests
+readline
 streamlit
 python-dotenv
 huggingface-hub
-
-
-
-
-
