@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 from typing import List, Dict, Union
 from dataclasses import dataclass, asdict
 from huggingface_hub import InferenceClient
+from Speech_to_text import main_stt
+import asyncio
 
 @dataclass
 class Message:
@@ -122,7 +124,7 @@ class ChatBot:
             print(f"Debug info - Error occurred: {error_msg}")  # Added for debugging
             return error_msg
 
-def main():
+async def main():
     parser = argparse.ArgumentParser(description="Terminal Chat Application")
     parser.add_argument("--model", default="meta-llama/Llama-3.2-11B-Vision-Instruct", help="Model name to use")
     args = parser.parse_args()
@@ -136,7 +138,7 @@ def main():
 
     while True:
         try:
-            user_input = input("\nYou: ").strip()
+            user_input = await main_stt()
 
             if user_input.lower() == 'exit':
                 print("Goodbye!")
@@ -163,4 +165,4 @@ def main():
             print(f"\nAn error occurred: {str(e)}")
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

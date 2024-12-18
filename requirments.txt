@@ -2,7 +2,10 @@ requests
 streamlit
 python-dotenv
 huggingface-hub
-
+RealtimeSTT
+SpeechRecognition
+arabic-reshaper
+python-bidi
 
 
 
