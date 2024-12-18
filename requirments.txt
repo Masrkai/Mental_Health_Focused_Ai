@@ -1,5 +1,6 @@
 requests
 streamlit
+pyreadline3
 python-dotenv
 huggingface-hub
 RealtimeSTT
