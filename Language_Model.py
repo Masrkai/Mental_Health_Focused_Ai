@@ -9,6 +9,7 @@ from dataclasses import dataclass, asdict
 from huggingface_hub import InferenceClient
 from Speech_to_text import main_stt
 import asyncio
+from txt_animation_function import print_animated_txt
 
 @dataclass
 class Message:
@@ -156,7 +157,8 @@ async def main():
                 continue
 
             response = chatbot.get_response(user_input)
-            print("\nAssistant:", response)
+            print("\nAssistant:")
+            print_animated_txt(response)
 
         except KeyboardInterrupt:
             print("\nGoodbye!")
