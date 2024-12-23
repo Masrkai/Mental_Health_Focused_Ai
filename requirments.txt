@@ -1,12 +1,13 @@
+asyncio
 requests
 streamlit
+python-bidi
+RealtimeSTT
 pyreadline3
 python-dotenv
-huggingface-hub
-RealtimeSTT
-SpeechRecognition
 arabic-reshaper
-python-bidi
+huggingface-hub
+SpeechRecognition
 
 
 

@@ -1,4 +1,4 @@
-import time 
+import time
 
 
 def print_animated_txt(text):
