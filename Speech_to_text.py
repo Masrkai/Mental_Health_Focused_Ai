@@ -16,7 +16,7 @@ import asyncio
 #use this for installation:
 # pip install torch==2.5.1+cu121 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
 
-# dont forget to install cudnn for your version of cuda
+# dont forget to install cudnn for your version of cuda  
 
 #or in you got powerful cpu in line 52 switch from cuda to cpu
 

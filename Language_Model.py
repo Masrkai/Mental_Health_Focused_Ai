@@ -125,45 +125,34 @@ class ChatBot:
             print(f"Debug info - Error occurred: {error_msg}")  # Added for debugging
             return error_msg
 
-async def main():
+async def main(user_input):
     parser = argparse.ArgumentParser(description="Terminal Chat Application")
     parser.add_argument("--model", default="meta-llama/Llama-3.2-11B-Vision-Instruct", help="Model name to use")
     args = parser.parse_args()
 
     chatbot = ChatBot(model_name=args.model)
 
-    print(f"Chat initialized with model: {args.model}")
-    print("Type 'exit' to quit, 'clear' to clear history, 'personality' to update personality")
-    print("Current personality:", chatbot.personality)
-    print("\nStart chatting!")
+    # print(f"Chat initialized with model: {args.model}")
+    # print("Type 'exit' to quit, 'clear' to clear history, 'personality' to update personality")
+    # print("Current personality:", chatbot.personality)
+    # print("\nStart chatting!")
+    
+    try:
 
-    while True:
-        try:
-            user_input = await main_stt()
-
-            if user_input.lower() == 'exit':
+            if user_input.lower() == 'exit.':
                 print("Goodbye!")
-                break
-            elif user_input.lower() == 'clear':
+                return False
+            elif user_input.lower() == 'clear.':
                 chatbot.history.clear_history()
                 print("Conversation history cleared!")
-                continue
-            elif user_input.lower() == 'personality':
+            elif user_input.lower() == 'personality.':
                 new_personality = input("Enter new personality: ").strip()
                 chatbot.update_personality(new_personality)
                 print("Personality updated!")
-                continue
-            elif not user_input:
-                continue
 
             response = chatbot.get_response(user_input)
-            print("\nAssistant:")
-            print_animated_txt(response)
-
-        except KeyboardInterrupt:
-            print("\nGoodbye!")
-            break
-        except Exception as e:
+            return response
+    except Exception as e:
             print(f"\nAn error occurred: {str(e)}")
 
 if __name__ == "__main__":

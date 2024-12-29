@@ -3,3 +3,7 @@
 conversation_history.json
 /2b
 realtimesst.log
+__pycache__
+sign_in_out.json
+.streamlit
+/assets
