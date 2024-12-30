@@ -1,59 +1,79 @@
-from RealtimeSTT import AudioToTextRecorder
-import speech_recognition as sr
-import time
-import arabic_reshaper
-import re
-from bidi.algorithm import get_display
-import asyncio
+# Importing necessary libraries and modules
+from RealtimeSTT import AudioToTextRecorder  # Custom module for real-time speech-to-text recording
+import speech_recognition as sr  # Speech recognition library for converting audio to text
+import time  # Provides time-related functions
+import arabic_reshaper  # Handles reshaping of Arabic text for proper display
+import re  # Provides regular expression support
+from bidi.algorithm import get_display  # Manages bidirectional text rendering (e.g., Arabic)
+import asyncio  # Supports asynchronous programming
 
-# install cuda and cuddenn for GPU support
-# and based on that download torch and torchaudio
-# for cuda 11.8 use torch 2.51 and torchaudio 2.51
-#use this for installation: 
-#pip install torch==2.5.1+cu118 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu118
+# Comments for installing CUDA, cuDNN, and related PyTorch dependencies for GPU support:
+# Ensure CUDA and cuDNN are installed for GPU acceleration with PyTorch.
+# Installation commands for different CUDA versions are provided below.
 
-#for cuda 12x use torch 2.51 and torchaudio 2.51
-#use this for installation:
+# For CUDA 11.8:
+# pip install torch==2.5.1+cu118 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu118
+
+# For CUDA 12.x:
 # pip install torch==2.5.1+cu121 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
 
-# dont forget to install cudnn for your version of cuda  
+# Ensure that cuDNN is installed for your version of CUDA.
+# If a powerful CPU is available, line 52 can be modified to switch from GPU (CUDA) to CPU.
 
-#or in you got powerful cpu in line 52 switch from cuda to cpu
-
+# Regular expression to match Arabic characters
 ARABIC_CHARS_REGEX = re.compile(r'[\u0600-\u06FF]')
 
 def reshape_arabic_text(text):
-    reshaped_text = arabic_reshaper.reshape(text)
-    bidi_text = get_display(reshaped_text)
+    """
+    Reshapes Arabic text for proper display by reshaping characters
+    and applying bidirectional algorithm for alignment.
+    """
+    reshaped_text = arabic_reshaper.reshape(text)  # Reshape Arabic characters for rendering
+    bidi_text = get_display(reshaped_text)  # Apply bidirectional text formatting
     return bidi_text
 
 def is_arabic(text):
-    return bool(ARABIC_CHARS_REGEX.match(text))
+    """
+    Checks if the given text contains Arabic characters.
+    Returns True if the text is Arabic, otherwise False.
+    """
+    return bool(ARABIC_CHARS_REGEX.match(text))  # Matches text against Arabic character regex
 
 async def process_text(recorded_text, log):
-    if is_arabic(recorded_text):
-        reshaped_text = reshape_arabic_text(recorded_text)
-        print(f"Recorder Output (Arabic): {reshaped_text}")
-        log.append(reshaped_text)
+    """
+    Processes the recorded text to check if it's Arabic and reshapes it accordingly.
+    Logs the processed text (reshaped or plain) into the log.
+    """
+    if is_arabic(recorded_text):  # Check if the text is Arabic
+        reshaped_text = reshape_arabic_text(recorded_text)  # Reshape Arabic text
+        print(f"Recorder Output (Arabic): {reshaped_text}")  # Display reshaped Arabic text
+        log.append(reshaped_text)  # Add reshaped text to the log
     else:
-        print(f"Recorder Output: {recorded_text}")
-        log.append(recorded_text)
+        print(f"Recorder Output: {recorded_text}")  # Display non-Arabic text as-is
+        log.append(recorded_text)  # Add plain text to the log
 
 async def recorder_and_recognizer(log, recorder):
+    """
+    Handles audio recording and text recognition.
+    Processes recorded audio text and appends it to the log.
+    """
     try:
-        recorded_text = recorder.text()
-        await process_text(recorded_text, log)
+        recorded_text = recorder.text()  # Retrieve text from the audio recorder
+        await process_text(recorded_text, log)  # Process the retrieved text
     except Exception as e:
-        print(f"Error with AudioToTextRecorder: {e}")
-    return log
+        print(f"Error with AudioToTextRecorder: {e}")  # Handle recording errors gracefully
+    return log  # Return the updated log
 
 async def main_stt():
-    log =[]
-    with AudioToTextRecorder(model="tiny", device="cuda",compute_type="float32") as recorder:
-        log = await recorder_and_recognizer(log, recorder)
-        await asyncio.sleep(0.005)
+    """
+    Main function to perform real-time speech-to-text recognition and text processing.
+    Uses the AudioToTextRecorder to record and recognize speech.
+    """
+    log = []  # Initialize an empty log to store recognized text
 
-    return "\n".join(log)
+    # Use the audio-to-text recorder with specified model and device settings
+    with AudioToTextRecorder(model="tiny", device="cuda", compute_type="float32") as recorder:
+        log = await recorder_and_recognizer(log, recorder)  # Perform recording and recognition
+        await asyncio.sleep(0.005)  # Add a slight delay to simulate real-time processing
 
-
-
+    return "\n".join(log)  # Join and return the log as a single string of text
