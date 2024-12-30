@@ -348,7 +348,19 @@ def main_ui():
                 st.session_state.recording = False
         else:
             st.info("🎤 Click 'Start Recording' to begin")
-    
+
+        # Add text input field with Enter functionality
+        st.subheader("Text Input Interface")
+        with st.form("text_input_form"):
+            user_input = st.text_input("💬 Type your query and press Enter:")
+            submitted = st.form_submit_button("Submit")
+            if submitted and user_input.strip():
+                with st.spinner("🤖 Generating response..."):
+                    ai_response = chatbot.get_response(user_input)
+                st.text_area("🤖 AI Response", value=ai_response, height=200)
+            elif submitted:
+                st.warning("Please enter a query.")
+
     with col2:
         st.subheader("Quick Actions")
         st.markdown("""
