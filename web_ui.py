@@ -1,17 +1,18 @@
-import streamlit as st
-from streamlit_option_menu import option_menu
-from Language_Model import ChatBot
-from Speech_to_text import main_stt
-import asyncio
-import time
+# Import necessary libraries
+import streamlit as st  # Web framework for creating interactive web apps
+from streamlit_option_menu import option_menu  # For creating styled navigation menus
+from Language_Model import ChatBot  # Import custom ChatBot class for AI interactions
+from Speech_to_text import main_stt  # Import speech-to-text module
+import asyncio  # For asynchronous programming
+import time  # To add delays in execution
 
-# Initialize ChatBot instance
+# Initialize ChatBot instance for AI functionality
 chatbot = ChatBot()
 
-# Custom CSS for styling with new color palette and animations
+# Custom CSS for Streamlit styling with new color palette and animations
 st.markdown("""
 <style>
-    /* Theme colors */
+    /* Custom color variables */
     :root {
         --primary-color: #A6B37D;
         --background-color: #FEFAE0;
@@ -19,26 +20,26 @@ st.markdown("""
         --text-color: #C0C78C;
     }
 
-    /* Main container styling */
+    /* Styling the main container */
     .main {
         padding: 2rem;
         background-color: var(--background-color);
         font-family: 'sans serif';
     }
     
-    /* Override Streamlit's default background */
+    /* Set background color for the app by Override Streamlit's default background */
     .stApp {
         background-color: var(--background-color);
     }
     
-    /* Sidebar styling with animation */
+    /* Sidebar styling with animation states */
     .css-1d391kg {
         padding-top: 3.5rem;
         background-color: var(--secondary-bg-color);
         transition: transform 0.3s ease-in-out;
     }
     
-    /* Sidebar animation states */
+    /* Toggle for sidebar visibility */
     .sidebar-hidden {
         transform: translateX(-100%);
     }
@@ -48,7 +49,7 @@ st.markdown("""
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     }
     
-    /* Custom sidebar toggle button */
+    /* Custom toggle button for the sidebar */
     .sidebar-toggle {
         position: fixed;
         left: 0;
@@ -66,8 +67,8 @@ st.markdown("""
         background: var(--secondary-bg-color);
         padding-right: 25px;
     }
-    
-    /* Card-like containers with new colors */
+
+    /* Styling for Card-like containers */
     .stForm {
         background-color: var(--secondary-bg-color);
         padding: 2rem;
@@ -80,7 +81,7 @@ st.markdown("""
         transform: translateY(-5px);
     }
     
-    /* Custom button styling */
+    /* Styling buttons */
     .stButton>button {
         background-color: var(--primary-color);
         color: white;
@@ -95,7 +96,7 @@ st.markdown("""
         transform: translateY(-2px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* Text area styling */
     .stTextArea>div>div>textarea {
         background-color: white;
@@ -186,7 +187,7 @@ st.markdown("""
         sidebar.classList.toggle('sidebar-visible');
     }
 </script>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True)  # Injects the CSS into the app
 
 # Rest of your Python code remains the same as in the previous artifact, starting from:
 # Mock user database
@@ -196,26 +197,29 @@ USER_DB = {
     "user2": "password2"
 }
 
+# Initialize session states if not already present
 if "authenticated" not in st.session_state:
-    st.session_state.authenticated = False
+    st.session_state.authenticated = False  # Tracks user authentication status
 if "username" not in st.session_state:
-    st.session_state.username = None
+    st.session_state.username = None  # Stores the logged-in username
 if "recording" not in st.session_state:
-    st.session_state.recording = False
+    st.session_state.recording = False  # Tracks recording status
 if "show_sidebar" not in st.session_state:
-    st.session_state.show_sidebar = False
-if "sign_up_success" not in st.session_state:  # Add this line
-    st.session_state.sign_up_success = False
+    st.session_state.show_sidebar = False  # Tracks sidebar visibility
+if "sign_up_success" not in st.session_state:
+    st.session_state.sign_up_success = False  # Tracks sign-up success
 
+# Function for handling Sign In and Sign Up
 def signin_signup():
+    # Display Sign In / Sign Up options as a horizontal menu
     selected = option_menu(
         menu_title=None,
-        options=["Sign In", "Sign Up"],
-        icons=["person", "person-add"],
+        options=["Sign In", "Sign Up"],  # Two options
+        icons=["person", "person-add"],  # Icons for the options
         menu_icon="cast",
         default_index=0,
         orientation="horizontal",
-        styles={
+        styles={  # Custom styles for the menu
             "container": {"padding": "0!important", "background-color": "#B99470"},
             "icon": {"color": "#A6B37D", "font-size": "20px"},
             "nav-link": {
@@ -229,122 +233,120 @@ def signin_signup():
         }
     )
     
+    # Sign In functionality
     if selected == "Sign In":
-        st.title("Sign In")
-        with st.form("signin_form", clear_on_submit=True):
-            col1, col2 = st.columns([3, 1])
+        st.title("Sign In")  # Page title
+        with st.form("signin_form", clear_on_submit=True):  # Create a sign-in form
+            col1, col2 = st.columns([3, 1])  # Layout with two columns
             with col1:
-                username = st.text_input("Username")
-                password = st.text_input("Password", type="password")
+                username = st.text_input("Username")  # Username input
+                password = st.text_input("Password", type="password")  # Password input
             with col2:
-                st.write("")
-                st.write("")
-                submitted = st.form_submit_button("Sign In")
+                st.write("")  # Placeholder for alignment
+                submitted = st.form_submit_button("Sign In")  # Submit button
             
-            if submitted:
-                if USER_DB.get(username) == password:
-                    st.success(f"Welcome, {username}!")
-                    st.session_state.authenticated = True
-                    st.session_state.username = username
-                    st.rerun()
+            if submitted:  # If the form is submitted
+                if USER_DB.get(username) == password:  # Validate credentials
+                    st.success(f"Welcome, {username}!")  # Success message
+                    st.session_state.authenticated = True  # Mark as authenticated
+                    st.session_state.username = username  # Save username
+                    st.rerun()  # Reload the app
                 else:
-                    st.error("Invalid credentials.")
+                    st.error("Invalid credentials.")  # Show error for invalid login
 
+    # Sign Up functionality
     elif selected == "Sign Up":
-        st.title("Sign Up")
-        with st.form("signup_form", clear_on_submit=True):
-            username = st.text_input("Username")
-            col1, col2 = st.columns(2)
+        st.title("Sign Up")  # Page title
+        with st.form("signup_form", clear_on_submit=True):  # Create a sign-up form
+            username = st.text_input("Username")  # Username input
+            col1, col2 = st.columns(2)  # Layout with two columns
             with col1:
-                password = st.text_input("Password", type="password")
+                password = st.text_input("Password", type="password")  # Password input
             with col2:
-                confirm_password = st.text_input("Confirm Password", type="password")
-            submitted = st.form_submit_button("Sign Up")
+                confirm_password = st.text_input("Confirm Password", type="password")  # Confirm password input
+            submitted = st.form_submit_button("Sign Up")  # Submit button
             
-            if submitted:
-                if username in USER_DB:
-                    st.error("Username already exists.")
-                elif password != confirm_password:
-                    st.error("Passwords do not match.")
-                elif not username or not password:
-                    st.error("Please fill in all fields.")
+            if submitted:  # If the form is submitted
+                if username in USER_DB:  # Check if username exists
+                    st.error("Username already exists.")  # Show error
+                elif password != confirm_password:  # Check for matching passwords
+                    st.error("Passwords do not match.")  # Show error
+                elif not username or not password:  # Check for empty fields
+                    st.error("Please fill in all fields.")  # Show error
                 else:
-                    USER_DB[username] = password
-                    st.success("Account created successfully! Please sign in.")
-                    st.session_state.sign_up_success = True
-                    st.session_state.authenticated = True
-                    st.session_state.username = username
+                    USER_DB[username] = password  # Save new user
+                    st.success("Account created successfully! Please sign in.")  # Success message
+                    st.session_state.sign_up_success = True  # Update session state
+                    st.session_state.authenticated = True  # Mark as authenticated
+                    st.session_state.username = username  # Save username
                     time.sleep(1)  # Short delay before redirect
-                    st.rerun() 
+                    st.rerun()  # Reload the app
 
+# Sidebar functionality
 def sidebar():
-    with st.sidebar:
-        st.title("Menu")
-        st.markdown("---")
-        if st.button("Sign Out", key="signout"):
-            st.session_state.authenticated = False
-            st.session_state.username = None
-            st.rerun()
+    with st.sidebar:  # Define sidebar content
+        st.title("Menu")  # Sidebar title
+        st.markdown("---")  # Divider
+        if st.button("Sign Out", key="signout"):  # Sign out button
+            st.session_state.authenticated = False  # Reset authentication
+            st.session_state.username = None  # Clear username
+            st.rerun()  # Reload the app
         
-        st.markdown("---")
-        st.markdown("### Settings")
-        if st.button("Clear History"):
-            chatbot.history.clear_history()
-            st.success("Conversation history cleared!")
+        st.markdown("---")  # Divider
+        st.markdown("### Settings")  # Settings section
+        if st.button("Clear History"):  # Button to clear conversation history
+            chatbot.history.clear_history()  # Clear chatbot history
+            st.success("Conversation history cleared!")  # Success message
         
+        # Input to update AI personality
         new_personality = st.text_input("Update AI Personality:")
-        if st.button("Update Personality"):
+        if st.button("Update Personality"):  # Button to update personality
             if new_personality.strip():
-                chatbot.update_personality(new_personality)
-                st.success("Personality updated!")
+                chatbot.update_personality(new_personality)  # Update chatbot personality
+                st.success("Personality updated!")  # Success message
 
+# Main user interface
 def main_ui():
-    # Toggle sidebar button
-    if st.button("☰", key="toggle_sidebar"):
-        st.session_state.show_sidebar = not st.session_state.show_sidebar
+    if st.button("☰", key="toggle_sidebar"):  # Sidebar toggle button
+        st.session_state.show_sidebar = not st.session_state.show_sidebar  # Toggle sidebar visibility
 
-    if st.session_state.show_sidebar:
-        sidebar()
+    if st.session_state.show_sidebar:  # If sidebar is visible
+        sidebar()  # Display sidebar
 
-    # Main content
-    st.title("AI Assistant Dashboard")
-    st.markdown(f"Welcome back, **{st.session_state.username}**! 👋")
+    st.title("AI Assistant Dashboard")  # Main title
+    st.markdown(f"Welcome back, **{st.session_state.username}**! 👋")  # Welcome message
     
-    # Create two columns for the main content
-    col1, col2 = st.columns([2, 1])
+    col1, col2 = st.columns([2, 1])  # Two columns for layout
     
+    # Voice interface
     with col1:
-        st.subheader("Voice Interface")
-        if st.button("🎤 Start/Stop Recording", key="record_button"):
-            st.session_state.recording = not st.session_state.recording
+        st.subheader("Voice Interface")  # Section header
+        if st.button("🎤 Start/Stop Recording", key="record_button"):  # Start/Stop recording button
+            st.session_state.recording = not st.session_state.recording  # Toggle recording state
 
-        if st.session_state.recording:
-            st.info("🎙️ Recording in progress...")
+        if st.session_state.recording:  # If recording
+            st.info("🎙️ Recording in progress...")  # Recording message
             try:
-                while True:
-                    loop = asyncio.new_event_loop()
-                    asyncio.set_event_loop(loop)
-                    recorded_text = loop.run_until_complete(main_stt())
+                while True:  # Continuously record speech
+                    loop = asyncio.new_event_loop()  # Create new event loop
+                    asyncio.set_event_loop(loop)  # Set event loop
+                    recorded_text = loop.run_until_complete(main_stt())  # Get recorded text
                     
-                    if recorded_text.strip():
-                        st.text_area("📝 Speech-to-Text Output", value=recorded_text, height=100)
-                        if recorded_text.lower() == "exit.":
+                    if recorded_text.strip():  # If speech is detected
+                        st.text_area("📝 Speech-to-Text Output", value=recorded_text, height=100)  # Display speech output
+                        if recorded_text.lower() == "exit.":  # Stop recording if "exit." is said
                             st.session_state.recording = False
                             break
                         
-                        # Get AI response
-                        with st.spinner("🤖 Generating response..."):
-                            ai_response = chatbot.get_response(recorded_text)
+                        with st.spinner("🤖 Generating response..."):  # Show spinner while processing
+                            ai_response = chatbot.get_response(recorded_text)  # Get AI response
                         
-                        # Display AI response
-                        st.text_area("🤖 AI Response", value=ai_response, height=200)
-                        
-                        # Automatically continue recording
-                        st.session_state.recording = True
+                        st.text_area("🤖 AI Response", value=ai_response, height=200)  # Display AI response
+                        st.session_state.recording = True  # Continue recording
                     else:
-                        st.warning("🔇 No speech detected. Please try again.")
-            except Exception as e:
-                st.error(f"❌ Error: {str(e)}")
+                        st.warning("🔇 No speech detected. Please try again.")  # Warning for no speech
+            except Exception as e:  # Handle exceptions
+                st.error(f"❌ Error: {str(e)}")  # Display error
                 st.session_state.recording = False
         else:
             st.info("🎤 Click 'Start Recording' to begin")
@@ -362,7 +364,7 @@ def main_ui():
                 st.warning("Please enter a query.")
 
     with col2:
-        st.subheader("Quick Actions")
+        st.subheader("Quick Actions")  # Section header
         st.markdown("""
         Voice Commands:
         - Say "exit." to stop recording
@@ -370,9 +372,9 @@ def main_ui():
         - Say "personality." to update AI personality
         """)
 
-# Run the App
+# Run the app
 if __name__ == "__main__":
-    if not st.session_state.authenticated:
-        signin_signup()
+    if not st.session_state.authenticated:  # If user is not authenticated
+        signin_signup()  # Show Sign In/Sign Up
     else:
-        main_ui()
+        main_ui()  # Show main UI
