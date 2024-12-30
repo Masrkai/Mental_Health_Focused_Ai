@@ -22,7 +22,7 @@ class Message:
 
 # Manages the conversation history, including saving/loading messages
 class ConversationHistory:
-    def __init__(self, history_file: str = "conversation_history.json"):
+    def __init__(self, history_file: str = "conversation_history.json"):        
         self.history_file = history_file  # Path to the file storing conversation history
         self.messages: List[Message] = []  # List to store Message objects
         self.load_history()  # Load history from the file on initialization
@@ -164,6 +164,9 @@ async def main(user_input):
         # Handle errors and log the details
         print(f"\nAn error occurred: {str(e)}")
 
-# Script execution starts here
+def start():
+    userinput= asyncio.run(main_stt())
+    print(asyncio.run(main(userinput)) )
+
 if __name__ == "__main__":
-    asyncio.run(main())  # Run the main function as an asynchronous coroutine
+    start()# Run the main function as an asynchronous coroutine

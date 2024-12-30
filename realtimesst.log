@@ -2134,3 +2134,771 @@ RuntimeError: FFmpeg extension is not available.
 2024-12-30 09:30:17.669 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.2-11B-Vision-Instruct/v1/chat/completions HTTP/11" 200 None
 2024-12-30 09:30:28.013 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
 2024-12-30 09:30:34.919 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.2-11B-Vision-Instruct/v1/chat/completions HTTP/11" 200 None
+2024-12-30 09:36:54.865 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-30 09:36:59.187 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.2-11B-Vision-Instruct/v1/chat/completions HTTP/11" 200 None
+2024-12-30 11:07:28.906 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:07:28.924 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:07:28.934 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:07:28.935 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:07:30.365 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2024-12-30 11:07:30.374 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:07:30.378 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2024-12-30 11:07:30.385 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:07:30.385 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2024-12-30 11:07:30.392 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:07:30.393 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2024-12-30 11:07:30.393 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2024-12-30 11:07:31.006 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:07:31.009 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:07:31.009 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:07:58.508 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:07:58.510 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:07:58.510 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:07:58.510 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:07:59.965 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:08:06.317 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:08:06.318 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:08:06.318 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:08:06.319 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:08:08.794 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:08:08.804 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:08:08.815 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:08:08.823 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:08:08.823 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:08:09.361 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:08:09.362 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:08:09.364 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:08:09.630 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:08:09.632 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:08:09.647 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:08:09.660 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:08:10.159 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:08:10.159 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:08:10.160 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:08:12.225 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:08:12.229 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:08:12.230 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:08:13.799 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:08:13.859 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 4.23 seconds
+2024-12-30 11:08:13.874 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:08:13.889 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:08:13.905 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2024-12-30 11:08:14.439 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:08:14.601 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:08:15.723 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:08:15.724 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:08:15.725 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:08:15.725 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:08:15.728 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:08:15.986 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:08:15.987 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:08:15.987 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:08:15.987 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:08:29.364 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:08:29.364 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:08:29.368 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:08:29.471 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:08:29.474 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:08:29.479 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:08:29.494 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:08:31.734 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:08:31.734 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:08:31.735 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:08:36.719 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:08:36.761 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 7.29 seconds
+2024-12-30 11:08:36.777 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:08:36.785 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:08:36.823 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2024-12-30 11:08:37.297 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:08:37.533 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:08:37.678 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-30 11:09:32.182 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:09:32.187 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:09:32.197 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:09:32.207 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:09:32.208 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:10:24.278 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:10:24.281 - RealTimeSTT: root - WARNING - Audio queue size exceeds latency limit. Current size: 1463. Discarding old audio chunks.
+2024-12-30 11:10:24.281 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:10:24.282 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:10:24.282 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:10:24.283 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:10:24.284 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:10:24.284 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:10:24.288 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:10:26.221 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:10:26.221 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:10:26.221 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:10:26.221 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:10:28.011 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:10:28.011 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:10:28.013 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:10:28.019 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:10:28.021 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:10:28.022 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:10:28.070 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:10:29.427 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 1.40 seconds
+2024-12-30 11:10:29.436 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:10:29.451 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:10:29.953 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:10:30.235 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:11:42.152 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:11:42.160 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:11:42.171 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:11:42.178 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:11:42.178 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:11:43.890 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:11:43.892 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:11:43.892 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:11:47.847 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:11:47.849 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:11:47.849 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:11:47.849 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:11:47.852 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:11:48.031 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:11:48.031 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:11:48.031 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:11:48.033 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:11:51.230 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:11:51.231 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:11:51.231 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:11:51.274 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:11:51.276 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:11:51.304 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:11:51.307 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:11:51.336 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:11:51.336 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:11:51.336 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:12:01.535 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:12:01.596 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 10.32 seconds
+2024-12-30 11:12:01.611 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:12:01.625 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:12:01.641 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2024-12-30 11:12:02.139 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:12:02.387 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:12:02.553 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-30 11:12:06.159 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.2-11B-Vision-Instruct/v1/chat/completions HTTP/11" 200 None
+2024-12-30 11:12:06.166 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:12:06.183 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:12:06.195 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:12:06.202 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:12:06.203 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:12:07.649 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:12:07.652 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:12:07.652 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:12:11.867 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:12:11.868 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:12:11.869 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:12:11.869 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:12:11.873 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:12:12.371 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:12:12.371 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:12:12.371 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:12:12.373 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:12:14.610 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:12:14.610 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:12:14.611 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:12:14.698 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:12:14.701 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:12:14.727 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:12:14.739 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:12:14.929 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:12:14.930 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:12:14.930 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:12:15.788 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:12:15.803 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 1.10 seconds
+2024-12-30 11:12:15.818 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:12:15.831 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:12:16.292 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:12:16.558 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:12:28.689 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.2-11B-Vision-Instruct/v1/chat/completions HTTP/11" 200 None
+2024-12-30 11:12:28.696 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:12:28.702 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:12:28.714 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:12:28.722 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:12:28.722 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:12:30.377 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:12:30.379 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:12:30.379 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:12:34.142 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:12:34.144 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:12:34.144 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:12:34.144 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:12:34.146 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:12:37.202 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:12:37.202 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:12:37.202 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:12:37.203 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:12:41.623 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:12:41.623 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:12:41.624 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:12:41.672 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:12:41.674 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:12:41.676 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:12:41.687 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:12:43.015 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 1.34 seconds
+2024-12-30 11:12:43.025 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:12:43.035 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:12:43.500 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:12:43.798 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:12:46.915 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.2-11B-Vision-Instruct/v1/chat/completions HTTP/11" 200 None
+2024-12-30 11:12:46.922 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:12:46.927 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:12:46.939 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:12:46.948 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:12:46.949 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:12:48.092 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:12:48.095 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:12:48.095 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:12:52.663 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:12:52.664 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:12:52.665 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:12:52.665 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:12:52.668 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:12:53.099 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:12:53.099 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:12:53.099 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:12:53.100 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:41:07.643 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:41:07.643 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:41:07.644 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:41:07.679 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:41:07.688 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:41:07.710 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:41:07.711 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:41:12.999 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 5.31 seconds
+2024-12-30 11:41:13.016 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:41:13.021 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:41:13.466 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:41:13.467 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:44:37.917 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:44:37.932 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:44:37.937 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:44:37.937 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:44:38.804 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2024-12-30 11:44:38.810 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:44:38.813 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2024-12-30 11:44:38.817 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:44:38.817 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2024-12-30 11:44:38.821 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:44:38.822 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2024-12-30 11:44:38.822 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2024-12-30 11:44:39.160 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:44:39.162 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:44:39.162 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:44:41.888 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:44:41.889 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:44:41.889 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:44:41.889 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:44:42.829 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:44:43.244 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:44:43.244 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:44:43.244 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:44:43.244 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:44:45.739 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:44:45.740 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:44:45.741 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:44:45.747 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:44:45.758 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:44:45.760 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:44:45.797 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:44:46.509 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:44:46.509 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:44:46.509 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:44:46.537 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:44:46.632 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.87 seconds
+2024-12-30 11:44:46.648 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:44:46.664 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:44:47.084 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:44:47.247 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:44:47.353 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-30 11:44:59.421 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:44:59.426 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:44:59.441 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:44:59.451 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:44:59.451 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:45:21.905 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:45:21.906 - RealTimeSTT: root - WARNING - Audio queue size exceeds latency limit. Current size: 593. Discarding old audio chunks.
+2024-12-30 11:45:21.906 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:45:21.906 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:45:21.906 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:45:21.906 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:45:21.906 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:45:21.906 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:45:21.908 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:45:22.055 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:45:22.055 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:45:22.055 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:45:22.055 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:45:32.184 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:45:32.186 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:45:32.195 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:45:32.202 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:45:32.202 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:45:32.868 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:45:32.869 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:45:32.870 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:45:35.704 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:45:35.705 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:45:35.705 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:45:35.705 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:45:35.709 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:45:35.898 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:45:35.898 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:45:35.899 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:45:35.904 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:45:40.487 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:45:40.487 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:45:40.490 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:45:40.590 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:45:40.593 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:45:40.618 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:45:40.621 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:45:40.806 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:45:40.806 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:45:40.806 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:45:42.616 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:45:42.616 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:45:42.619 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:45:42.719 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:45:42.725 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:45:42.747 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:45:42.752 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:45:42.785 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:45:42.785 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:45:42.785 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:45:44.844 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:45:44.895 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 2.17 seconds
+2024-12-30 11:45:44.910 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:45:44.927 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:45:45.339 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:45:45.691 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:45:45.819 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-30 11:45:45.828 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:45:45.830 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:45:45.837 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:45:45.844 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:45:45.844 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:45:46.389 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:45:46.390 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:45:46.390 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:45:49.759 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:45:49.760 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:45:49.760 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:45:49.760 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:45:49.763 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:45:51.691 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:45:51.787 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 11.19 seconds
+2024-12-30 11:45:51.804 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:45:51.815 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:45:52.186 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:45:52.457 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:45:55.387 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:45:55.387 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:45:55.387 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:45:55.387 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:45:59.615 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:45:59.615 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:45:59.617 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:45:59.709 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:45:59.712 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:45:59.736 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:45:59.740 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:46:01.143 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 1.43 seconds
+2024-12-30 11:46:01.163 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:46:01.179 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:46:01.602 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:46:01.711 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:46:01.845 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (2): api-inference.huggingface.co:443
+2024-12-30 11:46:13.890 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:46:13.891 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:46:13.896 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:46:13.906 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:46:13.906 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:46:14.456 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:46:14.459 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:46:14.459 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:46:17.479 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:46:17.480 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:46:17.481 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:46:17.481 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:46:17.482 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:46:18.130 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:46:18.130 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:46:18.130 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:46:18.131 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:46:28.624 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:46:28.624 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:46:28.626 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:46:28.703 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:46:28.705 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:46:28.735 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:46:28.753 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:46:28.765 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:46:28.766 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:46:28.766 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:46:30.345 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:46:30.429 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 1.72 seconds
+2024-12-30 11:46:30.444 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:46:30.459 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:46:30.459 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2024-12-30 11:46:30.886 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:46:30.950 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:49:30.699 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:49:30.707 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:49:30.714 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:49:30.714 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:49:51.395 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2024-12-30 11:49:51.399 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:49:51.400 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2024-12-30 11:49:51.402 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:49:51.402 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2024-12-30 11:49:51.403 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "D:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 11:49:51.403 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2024-12-30 11:49:51.403 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2024-12-30 11:49:51.658 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:49:51.660 - RealTimeSTT: root - WARNING - Audio queue size exceeds latency limit. Current size: 547. Discarding old audio chunks.
+2024-12-30 11:49:51.660 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:49:51.660 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:49:51.661 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:49:51.661 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:49:51.661 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:49:51.661 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:49:52.305 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:49:53.653 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:49:53.654 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:49:53.654 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:49:53.662 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:49:57.494 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:49:57.494 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:49:57.496 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:49:57.598 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:49:57.602 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:49:57.608 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:49:57.613 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:49:58.866 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 1.26 seconds
+2024-12-30 11:49:58.877 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:49:58.888 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:49:59.276 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:49:59.472 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:49:59.589 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-30 11:50:07.964 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.2-11B-Vision-Instruct/v1/chat/completions HTTP/11" 200 None
+2024-12-30 11:50:07.969 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:50:07.972 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:50:07.977 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:50:07.983 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:50:07.983 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:50:13.101 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:50:13.102 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:50:13.103 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:50:15.879 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:50:15.881 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:50:15.881 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:50:15.881 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:50:15.883 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:50:16.020 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:50:16.020 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:50:16.020 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:50:16.023 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:50:19.422 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:50:19.424 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:50:19.424 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:50:19.529 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:50:19.533 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:50:19.534 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:50:19.540 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:50:19.800 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:50:19.800 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:50:19.800 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:50:21.982 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:50:22.016 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 2.48 seconds
+2024-12-30 11:50:22.032 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:50:22.039 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:50:22.094 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2024-12-30 11:50:22.424 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:50:22.567 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 11:50:48.984 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
+2024-12-30 11:51:00.150 - RealTimeSTT: urllib3.connectionpool - DEBUG - https://api-inference.huggingface.co:443 "POST /models/meta-llama/Llama-3.2-11B-Vision-Instruct/v1/chat/completions HTTP/11" 200 None
+2024-12-30 11:51:54.395 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 11:51:54.401 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 11:51:54.411 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 11:51:54.420 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 11:51:54.420 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 11:52:43.509 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 11:52:43.510 - RealTimeSTT: root - WARNING - Audio queue size exceeds latency limit. Current size: 1423. Discarding old audio chunks.
+2024-12-30 11:52:43.510 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 11:52:43.511 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 11:52:43.511 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 11:52:43.511 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 11:52:43.512 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 11:52:43.512 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 11:52:43.526 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 11:52:46.795 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:52:46.795 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:52:46.795 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 11:52:46.796 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 11:52:48.902 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 11:52:48.902 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 11:52:48.904 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 11:52:48.905 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 11:52:48.909 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 11:52:48.909 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 11:52:48.975 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 11:52:49.745 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 11:52:49.745 - RealTimeSTT: root - INFO - recording started
+2024-12-30 11:52:49.745 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 11:53:00.125 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 11:53:00.222 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 11.31 seconds
+2024-12-30 11:53:00.237 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 11:53:00.253 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 11:53:00.667 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 11:53:00.693 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 12:01:08.590 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 12:01:08.594 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 12:01:08.602 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 12:01:08.606 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 12:01:08.606 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 12:01:09.372 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 12:01:09.373 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 12:01:09.373 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 12:05:33.283 - RealTimeSTT: asyncio - DEBUG - Using selector: SelectSelector
+2024-12-30 12:05:33.285 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 12:05:33.291 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 12:05:33.296 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 12:05:33.296 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 12:05:41.816 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 12:05:41.816 - RealTimeSTT: root - WARNING - Audio queue size exceeds latency limit. Current size: 157. Discarding old audio chunks.
+2024-12-30 12:05:41.817 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 12:05:41.818 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 12:06:09.633 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 12:06:09.633 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 12:06:09.633 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 12:06:09.633 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 12:06:09.634 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 12:06:10.347 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 12:06:10.347 - RealTimeSTT: root - INFO - recording started
+2024-12-30 12:06:10.347 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 12:06:10.349 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 12:06:13.868 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 12:06:13.868 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 12:06:13.869 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 12:06:13.918 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 12:06:13.920 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 12:06:13.926 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 12:06:13.932 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 12:06:16.483 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 2.56 seconds
+2024-12-30 12:06:16.495 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 12:06:16.511 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 12:06:16.893 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 12:06:16.945 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 12:23:13.235 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2024-12-30 12:23:13.243 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2024-12-30 12:23:13.248 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2024-12-30 12:23:13.248 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2024-12-30 12:23:14.546 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2024-12-30 12:23:14.549 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "d:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 12:23:14.551 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2024-12-30 12:23:14.554 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "d:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 12:23:14.554 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2024-12-30 12:23:14.556 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torch\_ops.py", line 1032, in load_library
+    ctypes.CDLL(path)
+  File "d:\conda\envs\ai_proj_env\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\conda\envs\ai_proj_env\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2024-12-30 12:23:14.557 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2024-12-30 12:23:14.557 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "d:\conda\envs\ai_proj_env\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2024-12-30 12:23:14.730 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2024-12-30 12:23:14.734 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2024-12-30 12:23:14.734 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2024-12-30 12:23:19.816 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2024-12-30 12:23:19.818 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2024-12-30 12:23:19.818 - RealTimeSTT: root - INFO - Setting listen time
+2024-12-30 12:23:19.819 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2024-12-30 12:23:20.393 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2024-12-30 12:23:21.655 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 12:23:21.655 - RealTimeSTT: root - INFO - recording started
+2024-12-30 12:23:21.655 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2024-12-30 12:23:21.656 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2024-12-30 12:23:33.175 - RealTimeSTT: root - INFO - recording stopped
+2024-12-30 12:23:33.175 - RealTimeSTT: root - INFO - State changed from 'recording' to 'listening'
+2024-12-30 12:23:33.176 - RealTimeSTT: root - INFO - State changed from 'listening' to 'inactive'
+2024-12-30 12:23:33.269 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2024-12-30 12:23:33.273 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2024-12-30 12:23:33.284 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2024-12-30 12:23:33.307 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2024-12-30 12:23:33.365 - RealTimeSTT: root - INFO - voice activity detected
+2024-12-30 12:23:33.365 - RealTimeSTT: root - INFO - recording started
+2024-12-30 12:23:33.365 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'recording'
+2024-12-30 12:23:34.165 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2024-12-30 12:23:34.236 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.96 seconds
+2024-12-30 12:23:34.251 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2024-12-30 12:23:34.265 - RealTimeSTT: root - DEBUG - Terminating reader process
+2024-12-30 12:23:34.280 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2024-12-30 12:23:35.262 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2024-12-30 12:23:35.263 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2024-12-30 12:23:35.331 - RealTimeSTT: asyncio - DEBUG - Using proactor: IocpProactor
+2024-12-30 12:23:35.360 - RealTimeSTT: urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api-inference.huggingface.co:443
