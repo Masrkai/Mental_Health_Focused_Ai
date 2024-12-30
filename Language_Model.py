@@ -11,7 +11,7 @@ from dataclasses import dataclass, asdict  # Simplifies class creation and seria
 from huggingface_hub import InferenceClient  # Used to interact with Hugging Face's inference API
 from Speech_to_text import main_stt  # Placeholder for a custom speech-to-text function/module
 import asyncio  # Supports asynchronous programming
-from txt_animation_function import print_animated_txt  # Placeholder for a custom text animation function
+from deprecated.txt_animation_function import print_animated_txt  # Placeholder for a custom text animation function
 
 # Define a data class for individual messages
 @dataclass
