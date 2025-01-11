@@ -1,4 +1,5 @@
 .env
+.venv
 2b.zip
 conversation_history.json
 /2b
