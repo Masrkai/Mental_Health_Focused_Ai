@@ -1,16 +1,23 @@
+# Python Basics
 asyncio
 requests
-streamlit
 python-bidi
-RealtimeSTT
 pyreadline3
 python-dotenv
-arabic-reshaper
+
+# Ai model
 huggingface-hub
+
+# Text to speech
 RealtimeSTT
 SpeechRecognition
+
+# Depricated ~ For a rabic support
 arabic-reshaper
-python-bidi
+
+# webUI
+streamlit
+streamlit_option_menu
 
 
 
