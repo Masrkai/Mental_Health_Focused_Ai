@@ -2,15 +2,15 @@
 # Importing required libraries and modules
 import os  # Provides functionalities for interacting with the operating system
 import json  # For handling JSON data
+import asyncio  # Supports asynchronous programming
 import datetime  # For working with dates and times
 import argparse  # To parse command-line arguments
 import readline  # Improves terminal input handling by enabling line editing and history
 from dotenv import load_dotenv  # Loads environment variables from a .env file
+from Speech_to_text import main_stt  # Placeholder for a custom speech-to-text function/module
 from typing import List, Dict, Union  # For type hinting complex data structures
 from dataclasses import dataclass, asdict  # Simplifies class creation and serialization
 from huggingface_hub import InferenceClient  # Used to interact with Hugging Face's inference API
-from Speech_to_text import main_stt  # Placeholder for a custom speech-to-text function/module
-import asyncio  # Supports asynchronous programming
 from deprecated.txt_animation_function import print_animated_txt  # Placeholder for a custom text animation function
 
 # Define a data class for individual messages
