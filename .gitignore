@@ -1,11 +1,10 @@
 /2b
 .env
 .venv
+*.log
 2b.zip
 /assets
 .streamlit
 __pycache__
-realtimesst.log
-realtimesst.log
 sign_in_out.json
 conversation_history.json
